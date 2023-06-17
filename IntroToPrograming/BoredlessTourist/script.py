@@ -1,3 +1,5 @@
+# Completed
+
 # Global Variables
 
 destinations = ["Paris, France", "Shanghai, China",
