@@ -28,7 +28,7 @@ def play_word(player, word):
     player_to_words.get(player, list()).append(word)
 
 player_to_points = {}
-play_word("player2", "HOUSE")
+
 for player, words in player_to_words.items():
     player_points = 0
     for word in words:
