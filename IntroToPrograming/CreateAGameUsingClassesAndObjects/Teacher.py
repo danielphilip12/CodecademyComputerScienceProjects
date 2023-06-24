@@ -1,5 +1,5 @@
 class Teacher:
-    def __init__(self, full_name, title, *args):
+    def __init__(self, full_name: str, title: str, *args):
         self.full_name = full_name
         self.title = title
         self.name = self.title + " " + self.full_name.split(' ')[-1]
