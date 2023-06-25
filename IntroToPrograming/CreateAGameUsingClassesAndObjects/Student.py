@@ -20,3 +20,7 @@ class Student:
         print("These are {}'s friends".format(self.name))
         for friend in self.friends:
             print(friend.name)
+
+    def print_classes(self):
+        for course in self.courses:
+            print(course)

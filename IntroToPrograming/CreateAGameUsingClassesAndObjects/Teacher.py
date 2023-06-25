@@ -3,15 +3,22 @@ class Teacher:
         self.full_name = full_name
         self.title = title
         self.name = self.title + " " + self.full_name.split(' ')[-1]
-        self.classes = list(args)
+        self.skills = list(args)
+        self.courses = list()
+
+    def get_skills(self):
+        return self.skills
+        
+    def add_course(self, course):
+        self.courses.append(course)
 
     def _format_classes(self):
-        if len(self.classes) > 1:
-            return ', '.join(self.classes)
-        elif len(self.classes) == 1:
-            return self.classes[0]
+        if len(self.courses) > 1:
+            return ', '.join(self.courses)
+        elif len(self.courses) == 1:
+            return self.courses[0]
         else:
             return "nothing"
 
     def __repr__(self):
-        return "{}. They teach {}".format(self.name, self._format_classes())
+        return "{}. They can teach {}".format(self.name, self._format_classes())
