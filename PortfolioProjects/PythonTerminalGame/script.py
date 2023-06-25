@@ -15,7 +15,7 @@ class RockPaperScissors:
         return player_choice
 
     def computer_choice(self):
-        return self.choices[random.randint(0, len(self.choices)-1)]
+        return random.choice(self.choices)
     
     def determine_winner_or_tie(self, player, computer):
         if player == computer:
@@ -38,13 +38,18 @@ class RockPaperScissors:
                 return "You lose"
     
     def play_game(self):
-        player = self.player_choice()
-        computer = self.computer_choice()
+        while True:
+            player = self.player_choice()
+            computer = self.computer_choice()
 
-        result = self.determine_winner_or_tie(player, computer)
-        print("You picked " + player)
-        print("Computer picked " + computer)
-        print(result)
+            result = self.determine_winner_or_tie(player, computer)
+            print("You picked " + player)
+            print("Computer picked " + computer)
+            print(result)
+
+            play_again = input("Would you like to play again? yes or no: ")
+            if play_again.lower() != "yes":
+                break
 
 
 
